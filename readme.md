@@ -21,8 +21,11 @@ The key things to reproduce the problem seem to be the following:
 * There must be another line of code after the assignment to _things.
 
 To see the problem, set a breakpoint on the line that assigns to _things. Step over this line of code.
-Observe that _things is still null. Note that after stepping over the next line of code (the assignment to flag),
-_things now contains the correct value (a List object containing 2 things).
+Observe that _things is still null.
+
+Note that after stepping over the next line of code (the assignment to flag), _things now contains the
+correct value (a List object containing 2 things). So I guess the debugger just got slightly out of step
+with the underlying low-level instruction flow.
 
 ```csharp
 private static List<Thing> GetThings()
