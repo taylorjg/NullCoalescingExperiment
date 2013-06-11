@@ -17,7 +17,7 @@ After much experimentation, I have managed to reproduce this with just a few lin
 The key things to reproduce the problem seem to be the following:
 
 * The assignment needs to be to a member variable (_things).
-* It does not behave oddly with a string. It does behave oddly with a List of string. I have not tried other types.
+* It does not behave oddly with a string. It does behave oddly with a List of Thing. I have not tried other types.
 * There must be another line of code after the assignment to _things.
 
 To see the problem, set a breakpoint on the line that assigns to _things. Step over this line of code.
