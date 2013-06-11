@@ -27,6 +27,10 @@ Note that after stepping over the next line of code (the assignment to flag), _t
 correct value (a List object containing 2 things). So I guess the debugger just got slightly out of step
 with the underlying low-level instruction flow.
 
+UPDATE: I subsequently Googled this and found the following thread which describes the same problem:
+
+* http://stackoverflow.com/questions/4867420/c-sharp-null-coalescing-operator-returning-null
+
 ```csharp
 private static List<Thing> GetThings()
 {
